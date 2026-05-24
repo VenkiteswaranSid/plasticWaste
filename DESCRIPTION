@@ -13,3 +13,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/VenkiteswaranSid/plasticWaste
+BugReports: https://github.com/VenkiteswaranSid/plasticWaste/issues
