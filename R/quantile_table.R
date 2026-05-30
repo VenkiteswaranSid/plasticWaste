@@ -15,10 +15,6 @@
 #' @importFrom dplyr distinct mutate filter group_by summarise pull
 #'
 #' @export
-#'
-#' @examples
-#' quantile_table()
-#' quantile_table(lower_quantile = 0.25, upper_quantile = 0.75)
 
 quantile_table <- function(lower_quantile = 0.33, upper_quantile = 0.66) {
   stopifnot(
