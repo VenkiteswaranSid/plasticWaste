@@ -21,3 +21,5 @@ This function should take in inputs of the number of top countries and top compa
 gdp_plastics_table(top_x_countries)
 ```
 This function should take in an input of the top countries that we want displayed on the summary table, and it should output the countries, the amount of plastic waste they have, and their average GDP per capita.
+
+
