@@ -2,14 +2,19 @@
 % Please edit documentation in R/sankey_plot.R
 \name{sankey_plot}
 \alias{sankey_plot}
-\title{Create the plastics_top dataset}
+\title{Creates a Sankey plot}
 \usage{
 sankey_plot(top_x_countries = 5, top_x_companies = 10)
 }
+\arguments{
+\item{top_x_countries}{the number of top countries the user wants to display}
+
+\item{top_x_companies}{the number of top companies the user wants to display}
+}
 \value{
-A data frame filtered to top plastic-producing countries with GDP data joined
+A Sankey diagram showing the relationship between country and company for different types of
+plastic waste
 }
 \description{
-Filters the raw plastics data to the top 50 countries by total plastic waste,
-joins GDP per capita data, and removes countries with data quality issues.
+Plots the relationship between country and company when it comes to plastic waste
 }

@@ -22,7 +22,3 @@ Classifies countries into three GDP quantile groups (Low, Mid, High) based on
 GDP per capita, then summarises total plastic waste, average GDP per capita,
 and each group's share of the overall total for each group.
 }
-\examples{
-quantile_table()
-quantile_table(lower_quantile = 0.25, upper_quantile = 0.75)
-}
