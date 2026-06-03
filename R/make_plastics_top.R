@@ -6,6 +6,7 @@
 #' @return A data frame filtered to top plastic-producing countries with GDP data joined
 #'
 #' @importFrom dplyr filter distinct mutate pull summarise group_by left_join
+#' @importFrom furrr future_map_int
 #' @importFrom countrycode countrycode
 make_plastics_top <- function() {
   plastics <- load_data()
@@ -24,7 +25,7 @@ make_plastics_top <- function() {
                                       destination = "iso3c")) |>
     filter(!is.na(country_code)) |>
     filter(plastic_total != 61123) |>
-    dplyr::slice_max(plastic_total, n = 50) |>
+    slice_max(plastic_total, n = 50) |>
     pull(country_code)
 
   plastics |>

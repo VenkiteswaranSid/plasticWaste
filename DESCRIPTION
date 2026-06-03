@@ -23,5 +23,6 @@ LazyData: true
 Imports:
     dplyr,
     tidyr,
-    ggplot2
-
+    ggplot2,
+    furrr,
+    ggalluvial

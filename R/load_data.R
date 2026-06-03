@@ -7,6 +7,8 @@
 #' @importFrom readr read_csv
 #'
 #'@export
-load_data <- function(){
-  readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-01-26/plastics.csv')
+
+load_data <- function() {
+  path <- system.file("plastics.parquet", package = "plasticWaste")
+  arrow::read_parquet(path)
 }

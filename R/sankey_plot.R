@@ -19,7 +19,7 @@
 
 sankey_plot <- function(top_x_countries = 5, top_x_companies = 10) {
 
-  plastics_top <- make_plastics_top()
+  plastics_top <- load_data()
 
   user_companies <- plastics_top |>
     distinct(parent_company, grand_total) |>

@@ -13,6 +13,7 @@
 #' share_of_total (the group's share of overall plastic waste).
 #'
 #' @importFrom dplyr distinct mutate filter group_by summarise pull
+#' @importFrom furrr future_map_int future_map_dbl
 #'
 #' @export
 
@@ -23,7 +24,7 @@ quantile_table <- function(lower_quantile = 0.33, upper_quantile = 0.66) {
     lower_quantile < upper_quantile
   )
 
-  plastics_top <- make_plastics_top()
+  plastics_top <- load_data()
   labels <- c("Low GDP", "Mid GDP", "High GDP")
 
   classified <- plastics_top |>
@@ -53,7 +54,7 @@ quantile_table <- function(lower_quantile = 0.33, upper_quantile = 0.66) {
 
   tibble::tibble(gdp_category = labels) |>
     mutate(
-      total_plastic = purrr::map_int(gdp_category, quantile_plastic),
-      avg_gdp_per_capita = purrr::map_dbl(gdp_category, quantile_gdp),
+      total_plastic = future_map_int(gdp_category, quantile_plastic),
+      avg_gdp_per_capita = future_map_dbl(gdp_category, quantile_gdp),
       share_of_total = total_plastic / sum(total_plastic, na.rm = TRUE))
 }
