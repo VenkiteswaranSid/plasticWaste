@@ -25,4 +25,5 @@ Imports:
     tidyr,
     ggplot2,
     furrr,
-    ggalluvial
+    ggalluvial,
+    ggfittext

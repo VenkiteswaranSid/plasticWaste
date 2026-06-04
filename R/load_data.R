@@ -9,6 +9,6 @@
 #'@export
 
 load_data <- function() {
-  path <- system.file("plastics.parquet", package = "plasticWaste")
+  path <- system.file("extdata", "plastics.parquet", package = "plasticWaste")
   arrow::read_parquet(path)
 }

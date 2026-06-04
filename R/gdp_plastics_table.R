@@ -3,7 +3,7 @@
 #' Creates a summary table of the countries with the highest plastic waste,
 #' displaying each country's total plastic waste and average GDP per capita.
 #'
-#' @param top_x_countries Integer. Number of countries to display.
+#' @param top_x_countries the number of top countries the user wants to display
 #'
 #' @return A data frame containing the top countries by total plastic waste,
 #' along with their total plastic waste and average GDP per capita.#'

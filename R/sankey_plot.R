@@ -12,12 +12,20 @@
 #' @import dplyr
 #' @import ggplot2
 #' @import ggalluvial
+#' @import ggfittext
 #' @import paletteer
 #' @importFrom countrycode countrycode
 #'
 #' @export
 
-sankey_plot <- function(top_x_countries = 5, top_x_companies = 10) {
+sankey_plot <- function(top_x_countries = 2, top_x_companies = 5) {
+
+  if (!is.numeric(top_x_countries) || top_x_countries < 1) {
+    stop("top_x_countries must be a positive number")
+  }
+  if (!is.numeric(top_x_companies) || top_x_companies < 1) {
+    stop("top_x_companies must be a positive number")
+  }
 
   plastics_top <- load_data()
 

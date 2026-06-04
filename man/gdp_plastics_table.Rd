@@ -7,7 +7,7 @@
 gdp_plastics_table(top_x_countries = 10)
 }
 \arguments{
-\item{top_x_countries}{Integer. Number of countries to display.}
+\item{top_x_countries}{the number of top countries the user wants to display}
 }
 \value{
 A data frame containing the top countries by total plastic waste,

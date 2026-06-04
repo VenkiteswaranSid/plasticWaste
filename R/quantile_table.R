@@ -4,8 +4,8 @@
 #' GDP per capita, then summarises total plastic waste, average GDP per capita,
 #' and each group's share of the overall total for each group.
 #'
-#' @param lower_quantile A number between 0 and 1 defining the Low/Mid boundary.Defaults to 0.33.
-#' @param upper_quantile A number between 0 and 1 defining the Mid/High boundary. Must be greater than the lower quantile. Defaults to 0.66.
+#' @param lower_quantile A quantile that represents a percentage of the data, defining the Low/Mid boundary. Must be between 0 and 1 and defaults to 0.33.
+#' @param upper_quantile A quantile that represents a percentage of the data, defining the Mid/High boundary. Must be between 0 and 1, greater than the lower quantile, and defaults to 0.66.
 #'
 #' @return A tibble with four columns: gdp_category (the quantile group label),
 #' total_plastic (total plastic waste for the group),
